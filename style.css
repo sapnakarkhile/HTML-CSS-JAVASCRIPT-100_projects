@@ -1,28 +1,52 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
+
 body{
-    background-color: crimson;
-}
-.card {
-    width: 700px;
-    background: #ccc;
-    padding: 20px;
-    margin: 20px;
-    font-family: sans-serif;
-    line-height: 28px;
+    background: #00008bcb;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar{
-background-color: transparent;
-width: 20px;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(#21d4fd,#b721ff);
-    border-radius: 100px;
+.wrapper .loader {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.loader .loading {
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 0 10px;
+    animation: load 0.8s ease infinite;
+}
+
+.loader .loading .one{
+animation-delay: 0.3s;
+}
+.loader .loading .two{
+animation-delay: 0.4s;
+}
+.loader .loading .three{
+animation-delay: 0.5s;
+}
+
+@keyframes Load {
+    0%{
+        width: 30px;
+        height: 30px;
+    }
+    50%{
+        width: 20px;
+        height: 20px;
+    }
 }
